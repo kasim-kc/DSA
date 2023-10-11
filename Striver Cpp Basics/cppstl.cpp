@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include<vector>
 using namespace std;
 
 int main(){
@@ -61,7 +62,7 @@ int main(){
     // for(vector<int>:: iterator traverse = v.begin(); traverse != v.end(); traverse++ ){
     //     cout << *(traverse) << " "; 
     // }
-    cout << endl;
+    // cout << endl;
 
     // shorter syntax :-> use auto -> auto automatically represents or replaces vector<int>::iterator
     // It basically assigns datatype according to the datatype..
@@ -97,4 +98,36 @@ int main(){
 // naya.insert(naya.begin() + 1, 2, 50);  // {300, 50, 50, 100, 100};     // 2 is the number of times you want to insert..
 
 vector<int> copy(2, 50);
-// v.insert(v.begin(), copy.begin(), copy.end());   // {50,50,300,10,10,100,100}
+// v.insert(v.begin(), copy.begin(), copy.end());   // {50,50,300,10,10,100,100}    // copying one vector to another, adds copy to v at start
+
+// {10, 20}
+// cout << v.size();  // prints the number of elements that vector contains..
+
+// {10, 20}
+// v.pop_back();      // deletes the last element of the vector
+
+/*  // v1 -> {10, 20}
+    // v2 -> {30, 40} */ 
+ // v1.swap(v2);   v1 --> {30, 40}, v2 --> {10, 20}
+
+// v.clear();      // it erases the entire vector
+
+
+// cout << v.empty();    Returns a boolean value based on is vector empty or not..
+
+
+// +++++++++++++++++++++ LISTS +++++++++++++++
+// Declaration : list<int> ls;
+
+// ls.push_back(2);
+// ls.push_front(3);
+
+// it provides front opertions as well rest all in same as vector
+// insert function in vector is costlier so a list can be used..
+
+
+// list is internally implemented as a doubly-linked list whereas a vector is a singly linked list..
+
+
+// rest all functions are same as vector
+// begin, end , rbegin, rend, swap, clear, insert, size
