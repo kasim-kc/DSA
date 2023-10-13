@@ -230,3 +230,91 @@ vector<int> copy(2, 50);
     // top --> O(1) time
 
 */
+
+
+// +++++++++++++++++ SETS +++++++++++
+// Set container stores everything in stored order and stores only unique
+/*Declaration*/ set<int> st;
+
+/*  // A tree is maintained to store a set data structure or container
+    st.insert(1);
+    st.emplace(2);
+    st.insert(2);            // wont add this 2 as there is already a 2 present in the set
+    st.insert(4);
+    st.insert(3);    //{1,2,3,4}
+
+    
+    // Functionality of insert in vector can be used also, that only increases efficiency..
+
+    // begin(), end(), rbegin(), rend(), size(), empty() and swap() are same as those
+
+    // SET FUNCTIONS 
+    // {1,2,3,4,5}
+
+    ++ find(element) --> returns an iterator that points to the element memory location
+    auto it = st.find(3);
+
+    // if an element is not present, it find() returns st.end() ..
+
+    ++  erase(element)  --> erases element at its memory location   // takes logarithmic
+
+    int cnt = st.count(ele)  --> will return 1 in case the element is present otherwise 0 when absent 
+                            // as it will only return 1 due to presence of unique element in the set..
+
+    ==== Another way to erase an element in a lesser amount of time, constant time
+    auto it = st.find(3);
+    st.erase(it); ===============
+
+
+    // {1,2,3,4,5}
+    auto it1 = st.find(2);
+    auto it2 = st.find(4);
+
+    st.erase(it1, it2);  deletes [it1, it2)
+
+    // lower_bound() and upper_bound() function works  in the same way
+    // as in vector it does.
+
+    // This is the syntax..
+    auto it = st.lower_bound(2);
+
+    auto it = st.upper_bound(3);
+
+*/
+
+// +++++++++++ MULTI-SET ++++++++++++
+// Everything is same as set but stores duplicates also in a sorted fashion
+/*
+  // Declaration :->  multiset<int> ms;
+
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(1); {1,1,1}
+
+    // Deletion to be done carefully
+    ms.erase(1);     // all 1's erased..
+
+    int cnt = ms.count(1);    returns the number of times the element appeared
+
+    // If we want to erase only one instance of 1
+    ms.erase(ms.find(1))  
+    // Here find() will return the address of the first occurence of 1 and erase will delete that
+
+    // for deleting multiple instances of 1 but not all
+    ms.erase(ms.find(1), ms.find(1) + 2);    // we have to give others address with reference to the first..
+
+
+    // rest all functions are same as set..
+
+*/
+
+
+//+++++++++ Unordered Set +++++++++++++++++++
+// Declaration: unordered_set<int> st;
+
+// it stores unique but the order to store is random
+
+// lower_bound and upper_bound function doesnot works, rest all functions are same as above, it does not stores
+// in any particular order it has a better complexity in most cases than set..
+// worst case -> O(n)
+
