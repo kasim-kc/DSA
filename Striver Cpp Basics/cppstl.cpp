@@ -318,3 +318,51 @@ vector<int> copy(2, 50);
 // in any particular order it has a better complexity in most cases than set..
 // worst case -> O(n)
 
+// add this line
+
+
+// +++++++ MAP ++++++++++
+
+// A Map is a container that stores data in (key, value) pair
+
+// Declaration : map<int, int> mpp;      the datatype of key and value to be separated by comma..
+//               map<int, pair<int, int>> mpp;
+//               map<pair <int,int>, int> mpp;        
+
+// In map, the keys are unique and stored in sorted order
+
+// ----- Initialising and Accessing Elements ------ //
+// mpp[1] = 2;   // sets a value 2 for a key = '1'
+
+// mpp.emplace({3,1});   (key,value) format
+// mpp.insert({2,4});     
+
+/*
+    {1,2}
+    {2,4}
+    {3,1}
+*/
+
+
+// ======= Traversing and accessing map ========
+/* for(auto it : mpp){
+    cout << it.first << " " << it.second << endl;
+}
+
+// cout << mpp[1];     // its mpp[key] returns value at the key..
+// cout << mpp[5];
+*/
+
+// ====== Searching a key or value at address in map ======
+// auto it = mpp.find(3);       find(key)  -> to get address of pair containing that key..
+// cout << *(it).second;
+
+// if key,value is not present for find, it returns the end() of map..
+ 
+// lower_bound , upper_bound works same as above
+// erase, swap, size, empty are same as above
+
+// ..... MULTI-MAP && Unordered map .........
+// everthing same as map, only that a multi-map can store duplicate keys..
+// only mpp[key] doesn't work here
+// In unordered map, keys are unique but not stored in sorted manner..
